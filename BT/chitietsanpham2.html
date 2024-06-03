@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/chitiet.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <title>Trang Chi Tiết</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-logo">
+        <img src="./img/8619184.svg"width="150px" height="150px">
+      </div>
+      <ul class="header-ul">
+        <li class="header-li-items"><a href="">liên hệ</a></li>
+        <li class="header-li-items"><a href="">blog</a></li>
+        <li class="header-li-items"><a href="">thông tin</a></li>
+        <li class="header-li-items"><a href="">trang chủ</a></li>
+      </ul>
+      <div class="header-icon">
+        <div class="header-icon-search">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+          </svg>
+        </div>
+        <div class="header-icon-person">
+          <a href="http://" target="_blank" rel="noopener noreferrer">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-person-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div id="main-left">
+        <div class="img-main">
+          <img
+            src="https://file.hstatic.net/200000053174/file/mot-su-lua-chon-hoan-hao-cho-nhung-chang-trai-nang-dong_41836800cbec43fea8146989d0134596.jpeg"
+            class="slide"
+            alt=""
+          />
+        </div>
+        <div class="img-option">
+          <img
+            src="https://file.hstatic.net/200000053174/file/mot-su-lua-chon-hoan-hao-cho-nhung-chang-trai-nang-dong_41836800cbec43fea8146989d0134596.jpeg"
+            height="100px"
+            width="100px"
+            onclick="showingImg(this.src)"
+            alt=""
+          />
+          <img
+            src="https://file.hstatic.net/200000053174/file/ao-thun-tay-dai-chin-chan-khi-phoi-do_f4c683768ed04cdcb1e52dfc99114139.jpeg"
+            height="100px"
+            width="100px"
+            onclick="showingImg(this.src)"
+            alt=""
+          />
+          <img
+            src="https://file.hstatic.net/200000053174/file/phong-cach-thoi-trang-nam-don-gian-voi-ao-thun-tay-dai-tron_d9d3209ce1c0476ab5b9d44a91e8d154.jpeg"
+            height="100px"
+            onclick="showingImg(this.src)"
+            width="100px"
+            alt=""
+          />
+          <img
+            src="https://file.hstatic.net/200000053174/file/ao-t-shirt-in-hinh-ma-chang-trai-nao-cung-nen-co_a5593ee945da4be6900455c7b43318f4.jpeg"
+            height="100px"
+            width="100px"
+            onclick="showingImg(this.src)"
+            alt=""
+          />
+        </div>
+      </div>
+      <div id="main-right">
+        <div class="name-cloth">
+          <h1>Áo T-Shirt</h1>
+          <h2>20.000đ</h2>
+        </div>
+        <div class="option-cloth">
+          <span class="option-cloth-left">
+            <input
+              type="number"
+              name=""
+              id="input-btn-form"
+              value="1"
+              min="1"
+              max="10"
+            />
+          </span>
+          <span class="option-cloth-right">
+            <select id="option-cloth-kinds" >
+              <option value="L">L</option>
+              <option value="M">M</option>
+              <option value="XL">XL</option>
+              <option value="2XL">2XL</option>
+            </select>
+          </span>
+        </div>
+        <div id="btn-buy">
+          <button class="btn-buy-success">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
+              <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+            </svg>
+            Mua</button>
+        </div>
+        <div class="describe">
+          <p>-áo chất liệu thóng mát.</p>
+          <p>-dễ phối đò</p>
+          <p>-chất lương trên từng xu.</p>
+          <p>Cung cấp các sản phẩm theo đúng tiêu chuẩn với chất lượng tốt nhất.Giá cả cạnh tranh.Đáp ứng mọi yêu cầu của khách hàng trong thời gian ngắn nhất có thể.Đảm bảo về số lượng và đúng chủng loại yêu cầu.Tôn trọng tất cả các nhu cầu của khách hàng.Tư vấn miễn phí cho quý khách hàng v</p>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-logo">
+        <img src="img/8619184.svg" height="200px" width="200px" alt="center"/>
+      </div>
+      <div class="footer-member">
+        <h3><b>Thành Viên Đã Đóng Góp</b></h3>
+        <h3><small>nguyen quang huynh</small></h3>
+        <h3><small>luong manh hung</small></h3>
+        <h3><small>ho duc anh</small></h3>
+      </div>
+      <div class="footer-address">
+        <p>bản quyên wedsite này thuộc công ty chúng tôi</p>
+        <p>địa chỉ :học viện nông nghiệp việt nam</p>
+        <p>hotline:092462742</p>
+        <div class="footer-icon-link">
+          <a href="#"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-facebook"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"
+              />
+              </svg>
+            </a>
+          <a href="#">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-telephone-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"
+              />
+            </svg>
+          </a>
+          <a href="#">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-youtube"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"
+              />
+            </svg>
+          </a>
+  
+          <a href="#">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-twitter"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15"
+              />
+            </svg>
+          </a>
+          <a href="#">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-tiktok"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script>
+    let isLarge = false;
+    let imgMain = document.querySelector(".img-main img");
+    function showingImg(pic) {
+      imgMain.src = pic;
+      if (isLarge) {
+        imgMain.style.width = "100%";
+        imgMain.style.height = "auto";
+        isLarge = false;
+      } else {
+        imgMain.style.width = "800px";
+        imgMain.style.height = "auto";
+        isLarge = true;
+      }
+    }
+  </script>
+</html>

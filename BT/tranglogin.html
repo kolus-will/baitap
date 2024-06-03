@@ -1,0 +1,807 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title> Áo QUẦN Store</title>
+  <link rel="website icon" type="png"
+    href="https://designercomvn.s3.ap-southeast-1.amazonaws.com/wp-content/uploads/2018/12/06090103/logo-shop-qu%E1%BA%A7n-%C3%A1o-8.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 50px;
+    height: 70px;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  header:sticky {
+    background: rgba(255, 255, 255, 1);
+  }
+
+  header:hover {
+    background: rgba(255, 255, 255, 1);
+  }
+
+  .logo {
+    flex: 1;
+  }
+
+  .menu {
+    flex: 3;
+    display: flex;
+  }
+
+  .menu li {
+    padding: 0 12px;
+    position: relative;
+  }
+
+  .menu li:hover .sub {
+    visibility: visible;
+    top: 45px;
+  }
+
+  .menu li a {
+    font-size: 12px;
+    font-weight: bold;
+    display: block;
+    line-height: 20px;
+  }
+
+  .sub {
+    position: absolute;
+    width: 220px;
+    border: 1px solid #ccc;
+    padding: 10px 0 10px 20px;
+    visibility: hidden;
+    top: 60px;
+    transition: 0.3s;
+    z-index: 1;
+    background: #fff;
+  }
+
+  .sub li a {
+    font-weight: normal !important;
+  }
+
+  .sub ul {
+    padding-left: 20px;
+    font-size: 12px;
+  }
+
+  .sub ul a {
+    font-weight: normal;
+    font-size: 12px;
+  }
+
+  .an li {
+    display: flex;
+    justify-content: center-between;
+    justify-items: center;
+  }
+
+  .an ul li a {
+    display: block;
+    width: 50px;
+    border: 1px solid #00ff99;
+    text-decoration: none;
+    padding: 8px 0;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  /*---------------------------------------------------app-------------------------------*/
+  .others {
+    flex: 1;
+    display: flex;
+  }
+
+  .others li {
+    padding: 0 12px;
+    position: relative;
+  }
+
+  .others li:hover .sub {
+    visibility: visible;
+    top: 45px;
+  }
+
+  .others li::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 50%;
+    background: #cccccc;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .others li:first-child {
+    position: relative;
+  }
+
+  .others li:last-child::after {
+    display: none;
+  }
+
+  .others li:first-child input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #111;
+    background: transparent;
+    outline: none;
+  }
+
+  .others li:first-child i {
+    position: absolute;
+    right: 10px;
+  }
+
+  /*-------------------------------------------------app----------------------------*/
+
+  .aspect-ratio-169 {
+    display: block;
+    position: relative;
+    padding-top: 56.25%;
+    transition: 0.3s
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .aspect-ratio-169 img {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  .dot-content {
+    position: absolute;
+    height: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+  }
+
+  .dot {
+    height: 14px;
+    width: 14px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin-right: 12px;
+  }
+
+  .dot.active {
+    background-color: #333;
+  }
+
+  /*-------------------------------------------------------------------- app-----------------------------------------------------------------------------------------------*/
+  body {
+    font-family: Poppins;
+  }
+
+  .footerr {
+    display: flex;
+    background-size: cover;
+    gap: 20px;
+    padding: 20px 80px;
+
+  }
+
+  .footerr li {
+    padding: 5px 12px;
+    position: relative;
+    margin-bottom: 17px;
+
+  }
+
+  .hotline a {
+    background: #221F20;
+    border-radius: 16px 0px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    padding: 10px 15px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #F7F8F9;
+    font-weight: 600;
+    line-height: 24px;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .col .hotline {
+    text-align: center;
+  }
+
+  /*------------------------app-------------------*/
+  .cartegory {
+    padding: 100px 0 0;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #000;
+    margin-left: 50px;
+  }
+
+  .cartegory-top {
+    margin-bottom: 50px;
+  }
+
+  .cartegory-top p {
+    font-family: var(--main-text-font);
+    margin: 0 12px;
+    font-size: 12px;
+  }
+
+  .cartegory-left {
+    width: 20%;
+  }
+
+  .cartegory-right {
+    width: 80%;
+  }
+
+  .cartegory-right-top-item:first-child {
+    flex: 2;
+    font-size: 16px;
+    font-family: var(--main-text-font);
+    font-weight: bold;
+  }
+
+  .cartegory-right-top-item {
+    flex: 1;
+    padding: 0 12px;
+  }
+
+  .cartegory-right-top-item button {
+    width: 100%;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    border: 1px solid #dddddd;
+    cursor: pointer;
+  }
+
+  .cartegory-right-top-item select {
+    width: 100%;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    border: 1px solid #dddddd;
+    cursor: pointer;
+  }
+
+  .cartegory-right-cont {
+    margin-top: 20px;
+    justify-content: space-between;
+  }
+
+  .cartegory-right-cont-item {
+    width: calc(25% - 20px);
+    text-align: center;
+    padding: 12px 0;
+  }
+
+  .cartegory-right-cont-item h4 {
+    font-size: 11px;
+    font-family: var(--main-text-font);
+    margin-top: 6px;
+    color: #000;
+  }
+
+  .cartegory-right-cont-item img {
+    width: 100%;
+  }
+
+  .cartegory-right-cont-item p {
+    font-size: 12px;
+  }
+
+  .cartegory-right-cont .cartegory-right-cont-item img {
+    transition: 0.5s;
+  }
+
+  .cartegory-right-cont .cartegory-right-cont-item img:hover {
+    transform: scale(1.2);
+  }
+
+  .cartegory-right-cont .cartegory-right-cont-item {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cartegory-right-cont .Sale {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    background-color: #dd2c00;
+    color: #fff;
+    padding: 4px 8px;
+    font-size: 12px;
+
+  }
+
+  .cartegory-right-cont h4 {
+    font-size: 14px;
+  }
+
+  .cartegory-right-cont a {
+    display: block;
+    border: 1px solid #dd2c00;
+    text-decoration: none;
+    padding: 6px 0;
+  }
+
+  .cartegory-right-cont .price {
+    color: #ddc700;
+  }
+
+  .cartegory-right-buttom {
+    justify-content: space-between;
+    margin: 30px 0 20px;
+    width: 100%;
+  }
+
+  .cartegory-right-buttom p {
+    font-family: var(--main-text-font);
+    font-size: 11px;
+  }
+
+  .cartegory-left ul li {
+    padding: 12px 0;
+  }
+
+  .cartegory-left ul li a {
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: var(--main-text-font);
+
+  }
+
+  .cartegory-left ul li ul li {
+    padding-left: 10px;
+  }
+
+  .cartegory-left-li ul {
+    display: none;
+  }
+
+  .cartegory-left-li.block ul {
+    display: block;
+  }
+
+  .cartegory-left ul li ul li a {
+    color: #333333;
+    font-size: 12px;
+  }
+
+  .button {
+    display: flex;
+    justify-content: center;
+  }
+
+  @media (max-width: 768px) {
+    .button .button-code {
+      font-size: 14px;
+      line-height: 16px;
+      padding: 10px 16px;
+      border-radius: 12px 0px;
+    }
+  }
+
+  .button .button-code {
+    background: #FFFFFF;
+    border: 1px solid #221F20;
+    box-sizing: border-box;
+    border-radius: 24px 0px;
+    padding: 13px 24px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #221F20;
+    display: inline-block;
+    position: relative;
+  }
+</style>
+
+<body>
+  <header>
+    <div class="logo">
+      <img
+        src="https://designercomvn.s3.ap-southeast-1.amazonaws.com/wp-content/uploads/2018/12/06090103/logo-shop-qu%E1%BA%A7n-%C3%A1o-8.png"
+        alt="" width="120" height="150">;
+    </div>
+    <div class="menu">
+      <li><a href="">ÁO QUẦN NAM</a>
+        <ul class="sub">
+          <li><a href="">Hàng Mới Về</a></li>
+          <li><a href="">Collection</a></li>
+          <li><a href="">ÁO</a>
+            <ul>
+              <li><a href="">Áo So mi</a></li>
+              <li><a href="">Áo Len</a></li>
+              <li><a href="">Áo Khoác</a></li>
+              <li><a href="">Áo Trắng</a></li>
+              <li><a href="">Áo dài tay</a></li>
+            </ul>
+          </li>
+          <li><a href=""> QUẦN</a>
+            <ul>
+              <li><a href="">Quần Bggy</a></li>
+              <li><a href="">Quần Âu</a></li>
+              <li><a href="">Quần Bò</a></li>
+              <li><a href="">Quần short</a></li>
+
+            </ul>
+          </li>
+        </ul>
+
+      </li>
+
+      <li><a href="">ÁO QUẦN NỮ </a>
+        <ul class="sub">
+          <li><a href="">Hàng Mới Về</a></li>
+          <li><a href="">Collection</a></li>
+          <li><a href="">ÁO</a>
+            <ul>
+              <li><a href="">Áo So mi</a></li>
+              <li><a href="">Áo Len</a></li>
+              <li><a href="">Áo Khoác</a></li>
+              <li><a href="">Áo Trắng</a></li>
+              <li><a href="">Áo dài tay</a></li>
+            </ul>
+          </li>
+          <li><a href=""> QUẦN</a>
+            <ul>
+              <li><a href="">Quần Bggy</a></li>
+              <li><a href="">Quần Âu</a></li>
+              <li><a href="">Quần Bò</a></li>
+              <li><a href="">Quần short</a></li>
+
+            </ul>
+          </li>
+        </ul>
+      <li><a style="color:red;" href=""> SALE ONLINE ONLY </a>
+        <ul class="sub">
+          <li><a href="">ƯU ĐÃI HÈ LỚN-SALE off 60%</a></li>
+          <ul>
+            <li><a href="">ÁO</a></li>
+            <li><a href="">QUẦN</a></li>
+            <li><a href="">ĐẦM</a></li>
+            <li><a href="">VÁY</a></li>
+
+          </ul>
+      </li>
+      </ul>
+      <li><a href="">BỘ SƯU TẬP</a></li>
+      <li><a href="">Hàng Bán Chạy</a></li>
+      <li><a href="">VỀ CHÚNG TÔI </a>
+        <ul class="sub">
+          <li><a href="">Về ASIN STORE</a></li>
+          <li><a href="">Hoạt Động Cộng Đồng</a></li>
+        </ul>
+      </li>
+    </div>
+    <div class="others">
+      <li><a href=""><input placeholder="Tìm Kiếm" type="text"> <i class="fas fa-search"></i></a>
+        <ul class="sub">
+          <ul class="an">
+            <li style="font-weight: bold;">Tìm Kiếm Nhiều Nhất</li>
+            <ul>
+              <li><a href="">ÁO</a></li>
+              <li><a href="">QUẦN</a></li>
+              <li><a href="">ĐẦM</a></li>
+              <li><a href="">VÁY</a></li>
+
+            </ul>
+      </li>
+      </ul>
+      </ul>
+      <li><a class="fa fa-headphones" href=""></a></li>
+      <li><a class="fa fa-user" href="dangnhap.html"></a></li>
+      <li><a class="fa fa-cart-shopping" href=""></a></li>
+    </div>
+  </header>
+  <section id="Slider">
+    <div class="aspect-ratio-169">
+      <img
+        src="https://file.hstatic.net/200000472237/file/chup-anh-quan-ao-dep-bang-dien-thoai_ed543464b2c248588df949f9618361f8_grande.jpg">
+      <img src="https://aeros.vn/upload/images/thiet-ke-shop-thoi-trang-6.jpg">
+      <img src="https://lavenderstudio.com.vn/wp-content/uploads/2021/06/cach-chup-hinh-san-pham-quan-ao-dep-2.png">
+      <img src="https://blog.dktcdn.net/files/kinh-nghiem-mo-shop-quan-ao-1.png">
+      <img src="https://simerp.io/wp-content/uploads/2021/12/ke-hoach-kinh-doanh-quan-ao.jpg">
+      <img src="https://blog.webico.vn/wp-content/uploads/2019/12/7cbae302da0f925f931a92f044156b18-1.jpg">
+
+    </div>
+    <div class="dot-content">
+      <div class="dot active"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+
+  </section>
+  <section class="cartegory">
+    <div class="content">
+      <div class="cartegory-top row">
+        <p>Trang Chủ</p><span>&#8594;</span>
+        <P>Quần Áo Nam</p><span>&#8594;</span>
+        <p>Quần áo nữ</p>
+      </div>
+      <div class="content">
+        <div class="row">
+          <div class="cartegory-left">
+            <ul>
+              <li class="cartegory-left-li"><a href="#">ÁO QUẦN NAM</a>
+                <ul>
+                  <li><a href="">Hàng Mới Về</a></li>
+                  <li><a href="">Quần Bo</a></li>
+                  <li><a href="">Quần Âu</a></li>
+                </ul>
+              </li>
+              <li class="cartegory-left-li "><a href="#">QUẦN ÁO NỮ</a>
+                <ul>
+                  <li><a href="">Hàng Mới Về</a></li>
+                  <li><a href="">Quần Bo</a></li>
+                  <li><a href="">Quần Âu</a></li>
+                </ul>
+              </li>
+              <li class="cartegory-left-li"><a href="">SALE ONLINE ONLY</a></li>
+              <li class="cartegory-left-li"><a href="">SALE ONLINE ONLY</a></li>
+              <li class="cartegory-left-li"><a href="">SALE ONLINE ONLY</a></li>
+              <li class="cartegory-left-li"><a href="">SALE ONLINE ONLY</a></li>
+
+            </ul>
+          </div>
+
+
+          <div class="cartegory-right row">
+            <div class="cartegory-right-top-item">
+              <p>Hàng Mới về</p>
+            </div>
+            <div class="cartegory-right-top-item">
+              <button><span>Bộ Lọc</span><i class="fa fa-sort-down"></i></button>
+            </div>
+            <div class="cartegory-right-top-item">
+              <select name="" id="">
+                <option value="">Sắp xếp</option>
+                <option value="">Giá cao Đến thấp</option>
+                <option value="">Giá Thấp đến cao</option>
+              </select>
+            </div>
+            <div class="cartegory-right-cont row">
+              <div class="cartegory-right-cont-item">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM8FaCU8THjQzGoCGguPX1tL_5wqcCOqfF_uyf0uRjYw&s"
+                  alt="" />;
+                <div class="Sale"> -20%</div>
+                <h4>áo cổ tròn ngắn tay quần short</h4>
+                <p>Tick.Vn</p>
+                <div class="price"><span>$100</span> - $400</div>
+                <a href="">Mua Ngay</a>
+
+              </div>
+              <div class="cartegory-right-cont-item">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJrjKepOm1sq4DZ0_tZDi9-EXsYQ2ji-7jaYyrZcgk-A&s"
+                  alt="" />;
+                <div class="Sale"> -50%</div>
+                <h4>Áo tay dài mùa Đông</h4>
+                <p>Tick.Vn</p>
+                <div class="price"><span>$100</span> - $400</div>
+                <a href="">Mua Ngay</a>
+              </div>
+
+              <div class="cartegory-right-cont-item">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbYV7xzASH04JirmXD7HNHEcazu6lH63bjSvepURVwsQ&s"
+                  alt="" />;
+                <div class="Sale"> -30%</div>
+                <h4>Áo Đẹp</h4>
+                <p>Tick.Vn</p>
+                <div class="price"><span>$100</span> - $400</div>
+                <a href="">Mua Ngay</a>
+              </div>
+
+              <div class="cartegory-right-cont-item">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi1YhZCW_LrEZGSYa_VCTAydaqJMPIpAIOsK3Blfuc9g&s"
+                  alt="" />;
+                <div class="Sale"> -30%</div>
+                <h4>Áo Đẹp</h4>
+                <p>Tick.Vn</p>
+                <div class="price">$100-$400</div>
+                <a href="">Mua Ngay</a>
+              </div>
+              <div class="cartegory-right-cont-item">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi1YhZCW_LrEZGSYa_VCTAydaqJMPIpAIOsK3Blfuc9g&s"
+                  alt="" />;
+                <div class="Sale"> -30%</div>
+                <h4>Áo Đẹp</h4>
+                <p>Tick.Vn</p>
+                <div class="price">$100-$400</div>
+                <a href="">Mua Ngay</a>
+              </div>
+              <div class="cartegory-right-cont-item">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi1YhZCW_LrEZGSYa_VCTAydaqJMPIpAIOsK3Blfuc9g&s"
+                  alt="" />;
+                <div class="Sale"> -30%</div>
+                <h4>Áo Đẹp</h4>
+                <p>Tick.Vn</p>
+                <div class="price">$100-$400</div>
+                <a href="">Mua Ngay</a>
+              </div>
+              <div class="cartegory-right-cont-item">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2y7N-d9XHK1Wt7HxWM8w7CEl30jRsRX1l7XMKIOgtmg&s"
+                  alt="" />;
+                <div class="Sale"> -30%</div>
+                <h4>Áo Đẹp</h4>
+                <p>Tick.Vn</p>
+                <div class="price">$100-$400</div>
+                <a href="">Mua Ngay</a>
+              </div>
+              <div class="cartegory-right-cont-item">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPf4XkMywY7bM7pk9mAAWdeS-8Rtwrurisxa_Opf4dFA&s"
+                  alt="" />;
+                <div class="Sale"> -30%</div>
+                <h4>Áo Đẹp</h4>
+                <p>Tick.Vn</p>
+                <div class="price">$100-$400</div>
+                <a href="">Mua Ngay</a>
+              </div>
+            </div>
+
+            <div class="cartegory-right-buttom row">
+              <div class="cartegory-right-buttom-items">
+                <p>Hiển thị 2 <span> | </span>3 sản phẩm </p>
+              </div>
+
+              <div class="cartegory-right-buttom-items">
+                <p><span>&#187;</span>1 2 3 <span>&#187;</span> Trang Cuối</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="button">
+          <a href="testdanhsach.html" class="button-code">Xem Tất Cả</a>
+        </div>
+  </section>
+
+  <div class="footerr">
+    <div class="col">
+      <img
+        src="https://designercomvn.s3.ap-southeast-1.amazonaws.com/wp-content/uploads/2018/12/06090103/logo-shop-qu%E1%BA%A7n-%C3%A1o-8.png"
+        alt="" width="100" height="150">
+      <img src="https://pubcdn.ivymoda.com/ivy2/images/img-congthuong.png" alt="">
+      <img src="https://images.dmca.com/Badges/dmca_protected_16_120.png?ID=0cfdeac4-6e7f-4fca-941f-57a0a0962777" alt=""
+        height="30">
+      <a href=""><i class="fa-brands fa-facebook"></i></a>
+      <a href=""><i class="fa-brands fa-tiktok"></i></a>
+      <a href=""><i class="fa-solid fa-g"></i></a>
+      <a href=""><i class="fa-brands fa-instagram"></i></a>
+      <a href=""><i class="fa-brands fa-youtube"></i></a>
+      <div class="hotline">
+        <a href="">HOT ONLINE: 0345678910</a>
+      </div>
+    </div>
+
+    <div class="col">
+      <h3>Giới Thiệu </h3>
+      <ul>
+        <li><a href="">Về ASIN Store</a></li>
+        <li><a href="">Tuyển Dụng</a></li>
+        <li><a href="">Hệ Thống cửa Hàng</a></li>
+      </ul>
+    </div>
+    <div class="col">
+      <h3>Dịch Vụ Khách Hàng </h3>
+      <ul>
+        <li><a href="">Chính Sách Điều Khoản </a></li>
+        <li><a href="">Hệ thống Mua dùng</a></li>
+        <li><a href="">chính sách bảo hành</a></li>
+        <li><a href="">Chính sách đổi trả </a></li>
+        <li><a href="">Chính sách giao nhận vận chuyển</a></li>
+        <li><a href="">Hệ Thống Cửa Hàng</a></li>
+      </ul>
+    </div>
+    <div class="col">
+      <h3>Liên Hệ nhóm Hồ Anh Hùng Huynh </h3>
+      <ul>
+        <li><a href="">Email </a></li>
+        <li><a href="">Hotline:</a></li>
+        <li><a href="">Live Chat</a></li>
+        <li><a href="">message</a></li>
+        <li><a href="">Liên Hệ</a></li>
+      </ul>
+    </div>
+  </div>
+
+</body>
+<script>
+  const itemsliderbar = document.querySelectorAll(".cartegory-left-li")
+  itemsliderbar.forEach(function (menu, index) {
+    menu.addEventListener("click", function () {
+      menu.classList.toggle("block")
+    })
+  })
+  const header = document.querySelector("header")
+  window.addEventListener("scroll", function () {
+    x = window.pageYOffset
+    if (x > 0) {
+      header.classList.add("sticky")
+    } else {
+      header.classList.remove("sticky")
+    }
+  })
+  const imgPosition = document.querySelectorAll(".aspect-ratio-169 img")
+  const imgContainer = document.querySelector('.aspect-ratio-169')
+  const dotItem = document.querySelectorAll(".dot")
+  let imgNuber = imgPosition.length
+  let index = 0
+  imgPosition.forEach(function (image, index) {
+    image.style.left = index * 100 + "%"
+
+  })
+  function imgSlide() {
+    index++;
+    console.log(index)
+    if (index >= imgNuber - 1) { index = 0 }
+    slider(index)
+  }
+  function slider(index) {
+    imgContainer.style.left = "-" + index * 100 + "%"
+    const dotActive = document.querySelector('.active')
+    dotActive.classList.remove("active")
+    dotItem[index].classList.add("active")
+  }
+  setInterval(imgSlide, 5000)
+
+</script>
+
+</html>

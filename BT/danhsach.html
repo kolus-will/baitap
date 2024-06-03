@@ -1,0 +1,651 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Sản Phẩn Áo PoLo</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <link rel="website icon" type="png"
+    href="https://designercomvn.s3.ap-southeast-1.amazonaws.com/wp-content/uploads/2018/12/06090103/logo-shop-qu%E1%BA%A7n-%C3%A1o-8.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 50px;
+    height: 70px;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  header:sticky {
+    background: rgba(255, 255, 255, 1);
+  }
+
+  header:hover {
+    background: rgba(255, 255, 255, 1);
+  }
+
+  .logo {
+    flex: 1;
+  }
+
+  .menu {
+    flex: 3;
+    display: flex;
+  }
+
+  .menu li {
+    padding: 0 12px;
+    position: relative;
+  }
+
+  .menu li:hover .sub {
+    visibility: visible;
+    top: 45px;
+  }
+
+  .menu li a {
+    font-size: 12px;
+    font-weight: bold;
+    display: block;
+    line-height: 20px;
+  }
+
+  .sub {
+    position: absolute;
+    width: 220px;
+    border: 1px solid #ccc;
+    padding: 10px 0 10px 20px;
+    visibility: hidden;
+    top: 60px;
+    transition: 0.3s;
+    z-index: 1;
+    background: #fff;
+  }
+
+  .sub li a {
+    font-weight: normal !important;
+  }
+
+  .sub ul {
+    padding-left: 20px;
+    font-size: 12px;
+  }
+
+  .sub ul a {
+    font-weight: normal;
+    font-size: 12px;
+  }
+
+  .an li {
+    display: flex;
+    justify-content: center-between;
+    justify-items: center;
+  }
+
+  .an ul li a {
+    display: block;
+    width: 50px;
+    border: 1px solid #00ff99;
+    text-decoration: none;
+    padding: 8px 0;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  /*---------------------------------------------------app-------------------------------*/
+  .others {
+    flex: 1;
+    display: flex;
+  }
+
+  .others li {
+    padding: 0 12px;
+    position: relative;
+  }
+
+  .others li:hover .sub {
+    visibility: visible;
+    top: 45px;
+  }
+
+  .others li::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 50%;
+    background: #cccccc;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .others li:first-child {
+    position: relative;
+  }
+
+  .others li:last-child::after {
+    display: none;
+  }
+
+  .others li:first-child input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #111;
+    background: transparent;
+    outline: none;
+  }
+
+  .others li:first-child i {
+    position: absolute;
+    right: 10px;
+  }
+
+  /*-----------------------------capitalize----------------------------*/
+
+  .cartegory {
+    padding: 100px 0 0;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #000;
+    margin-left: 50px;
+  }
+
+  .cartegory-top {
+    margin-bottom: 50px;
+  }
+
+  .cartegory-top p {
+    font-family: var(--main-text-font);
+    margin: 0px 12px;
+    font-size: 12px;
+  }
+
+  .cartegory-left {
+    width: 20%;
+  }
+
+  .cartegory-right {
+    width: 80%;
+  }
+
+  .cartegory-right-top-item:first-child {
+    flex: 2;
+    font-size: 16px;
+    font-family: var(--main-text-font);
+    font-weight: bold;
+  }
+
+  .cartegory-right-top-item {
+    flex: 1;
+    padding: 0 12px;
+  }
+
+  .cartegory-right-top-item button {
+    width: 100%;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .cartegory-right-content {
+    margin-top: 20px;
+    justify-content: space-between;
+  }
+
+  .cartegory-right-content-item {
+    width: calc(25%-12px);
+    text-align: center;
+    padding: 12px 0;
+
+  }
+
+  .cartegory-right-content-item h3 {
+    font-size: 14px;
+    font-family: var(--main-text-font);
+    margin-top: 6px;
+    color: #333333;
+  }
+
+  .cartegory-right-top-item select {
+    width: 100%;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .cartegory-right-buttom {
+    justify-content: space-between;
+    margin: 30px 0 20px;
+    width: 100%;
+  }
+
+  .cartegory-right-buttom p {
+    font-family: var(--main-text-font);
+    font-size: 11px;
+  }
+
+  .cartegory-left ul li {
+    padding: 12px 0;
+  }
+
+  .cartegory-left ul li a {
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: var(--main-text-font);
+
+  }
+
+  .cartegory-left ul li ul li {
+    padding-left: 10px;
+  }
+
+  .cartegory-left-li ul {
+    display: none;
+  }
+
+  .cartegory-left-li.block ul {
+    display: block;
+  }
+
+  .cartegory-left ul li ul li a {
+    color: #333333;
+    font-size: 12px;
+  }
+
+  @media (max-width: 768px) {
+    .cartegory {
+      padding: 12px 19px;
+    }
+  }
+
+
+
+  /*-----------app-----*/
+
+
+  /* .footerr img {
+} */
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  body {
+    font-family: Poppins;
+  }
+
+  .footerr {
+    display: flex;
+    background-size: cover;
+    gap: 20px;
+    padding: 20px 80px;
+
+  }
+
+  .footerr li {
+    padding: 5px 12px;
+    position: relative;
+    margin-bottom: 17px;
+
+  }
+
+  .hotline a {
+    background: #221F20;
+    border-radius: 16px 0px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    padding: 10px 15px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #F7F8F9;
+    font-weight: 600;
+    line-height: 24px;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  @media (max-width: 768px) {
+    .hotline {
+      font-family: "Montserrat";
+      padding: 12px 19px;
+    }
+  }
+
+  /*----------------pagination row-----------*/
+  .pagination {
+    display: flex;
+    justify-content: center;
+  }
+
+  .pagination span {
+    display: initial-block;
+    padding: 3px 6px;
+    border: 1px solid #dddddd;
+    margin: 12px 10px 12px 0;
+    font-size: 12px;
+    cursor: pointer;
+
+  }
+</style>
+
+<body>
+  <header>
+    <div class="logo">
+      <img
+        src="https://designercomvn.s3.ap-southeast-1.amazonaws.com/wp-content/uploads/2018/12/06090103/logo-shop-qu%E1%BA%A7n-%C3%A1o-8.png"
+        alt="" width="120" height="150">;
+    </div>
+    <div class="menu">
+      <li><a href="">ÁO QUẦN NAM</a>
+        <ul class="sub">
+          <li><a href="">Hàng Mới Về</a></li>
+          <li><a href="">Collection</a></li>
+          <li><a href="">ÁO</a>
+            <ul>
+              <li><a href="">Áo So mi</a></li>
+              <li><a href="">Áo Len</a></li>
+              <li><a href="">Áo Khoác</a></li>
+              <li><a href="">Áo Trắng</a></li>
+              <li><a href="">Áo dài tay</a></li>
+            </ul>
+          </li>
+          <li><a href=""> QUẦN</a>
+            <ul>
+              <li><a href="">Quần Bggy</a></li>
+              <li><a href="">Quần Âu</a></li>
+              <li><a href="">Quần Bò</a></li>
+              <li><a href="">Quần short</a></li>
+
+            </ul>
+          </li>
+        </ul>
+
+      </li>
+
+      <li><a href="">ÁO QUẦN NỮ </a>
+        <ul class="sub">
+          <li><a href="">Hàng Mới Về</a></li>
+          <li><a href="">Collection</a></li>
+          <li><a href="">ÁO</a>
+            <ul>
+              <li><a href="">Áo So mi</a></li>
+              <li><a href="">Áo Len</a></li>
+              <li><a href="">Áo Khoác</a></li>
+              <li><a href="">Áo Trắng</a></li>
+              <li><a href="">Áo dài tay</a></li>
+            </ul>
+          </li>
+          <li><a href=""> QUẦN</a>
+            <ul>
+              <li><a href="">Quần Bggy</a></li>
+              <li><a href="">Quần Âu</a></li>
+              <li><a href="">Quần Bò</a></li>
+              <li><a href="">Quần short</a></li>
+
+            </ul>
+          </li>
+        </ul>
+      <li><a style="color:red;" href=""> SALE ONLINE ONLY 50% </a>
+        <ul class="sub">
+          <li><a href="">ƯU ĐÃI HÈ LỚN-SALE off 60%</a></li>
+          <ul>
+            <li><a href="">ÁO</a></li>
+            <li><a href="">QUẦN</a></li>
+            <li><a href="">ĐẦM</a></li>
+            <li><a href="">VÁY</a></li>
+
+          </ul>
+      </li>
+      </ul>
+      <li><a href="">BỘ SƯU TẬP</a></li>
+      <li><a href="">HÀNG BÁN CHẠY</a></li>
+      <li><a href="">VỀ CHÚNG TÔI </a>
+        <ul class="sub">
+          <li><a href="">Về ASIN STORE</a></li>
+          <li><a href="">Hoạt Động Cộng Đồng</a></li>
+        </ul>
+      </li>
+    </div>
+    <div class="others">
+      <li><a href=""><input placeholder="Tìm Kiếm" type="text"> <i class="fas fa-search"></i></a>
+        <ul class="sub">
+          <ul class="an">
+            <li>Tìm Kiếm Nhiều Nhất</li>
+            <ul>
+              <li><a href="">ÁO</a></li>
+              <li><a href="">QUẦN</a></li>
+              <li><a href="">ĐẦM</a></li>
+              <li><a href="">VÁY</a></li>
+
+            </ul>
+      </li>
+      </ul>
+      </ul>
+      <li><a class="fa fa-headphones" href=""></a></li>
+      <li><a class="fa fa-user" href="dangnhap.html"></a></li>
+      <li><a class="fa fa-cart-shopping" href=""></a></li>
+    </div>
+  </header>
+
+
+  <!-----------------app----------->
+  <section class="cartegory">
+    <div class="content">
+      <div class="cartegory-top row">
+        <p>Trang Chủ</p><span>&#8594;</span>
+        <P>ƯU ĐÃI HÈ LỚN-SALE OFF 20% -</p><span>&#8594;</span>
+        <p>Quần áo nữ</p>
+      </div>
+    </div>
+    <div class="content">
+      <div class="row">
+        <div class="cartegory-left">
+          <ul>
+            <li class="cartegory-left-li"><a href="#">ÁO QUẦN NAM</a>
+              <ul>
+                <li><a href="">Hàng Mới Về</a></li>
+                <li><a href="">Quần Bo</a></li>
+                <li><a href="">Quần Âu</a></li>
+              </ul>
+            </li>
+            <li class="cartegory-left-li "><a href="#">QUẦN ÁO NỮ</a>
+              <ul>
+                <li><a href="">Hàng Mới Về</a></li>
+                <li><a href="">Quần Bo</a></li>
+                <li><a href="">Quần Âu</a></li>
+              </ul>
+            </li>
+            <li class="cartegory-left-li"><a href="">SALE ONLINE ONLY</a></li>
+            <li class="cartegory-left-li"><a href="">SALE ONLINE ONLY</a></li>
+            <li class="cartegory-left-li"><a href="">SALE ONLINE ONLY</a></li>
+            <li class="cartegory-left-li"><a href="">SALE ONLINE ONLY</a></li>
+
+          </ul>
+        </div>
+
+
+        <div class="cartegory-right row">
+          <div class="cartegory-right-top-item">
+            <p>DEAL LỚN CHÀO HÈ-SALE 20%</p>
+          </div>
+          <div class="cartegory-right-top-item">
+            <button><span>Bộ Lọc</span><i class="fa fa-sort-down"></i></button>
+          </div>
+          <div class="cartegory-right-top-item">
+            <select name="" id="">
+              <option value="">Sắp xếp</option>
+              <option value="">Giá cao Đến thấp</option>
+              <option value="">Giá Thấp đến cao</option>
+            </select>
+          </div>
+          <div class="cartegory-right-content row">
+            <div class="cartegory-right-content-item">
+
+              <img
+                src="https://product.hstatic.net/1000026602/product/img_9727_43583c0bff174e39acba56d1f3bc75e0_large.jpg"
+                alt="">
+              <h3>Á0 POLO Athletic The Checked 90s</h3>
+              <p>190.00<sup>đ</sup>-250.000<sup>đ</sup></p>
+            </div>
+            <div class="cartegory-right-content-item">
+              <img
+                src="https://product.hstatic.net/1000026602/product/img_2301_f83de28b841d4d109780c7874f8fe940_large.jpg"
+                alt="">
+              <h3>Áo Polo Monogram Deep Efect</h3>
+              <p>190.00<sup>đ</sup>-250.000<sup>đ</sup></p>
+            </div>
+            <div class="cartegory-right-content-item">
+              <img
+                src="https://product.hstatic.net/1000026602/product/dsc07427_1dbda1b2a78f4373a0f2ba4c4e6e721a_large.jpg"
+                alt="">
+              <h3>Áo Polo BOB Sleeves Navy</h3>
+              <p>190.00<sup>đ</sup>-250.000<sup>đ</sup></p>
+            </div>
+            <div class="cartegory-right-content-item">
+              <img
+                src="https://product.hstatic.net/1000026602/product/dsc05413_fbc7ec1b00404a06b65380d1ca28fde3_large.jpg"
+                alt="">
+              <h3>Áo PoLo Suede Elip Mark</h3>
+
+              <p>190.00<sup>đ</sup>-250.000<sup>đ</sup></p>
+            </div>
+            <div class="cartegory-right-content-item">
+              <img
+                src="https://product.hstatic.net/1000026602/product/img_8098_99f2447cc83a4fc7a2d3b13bbf088747_large.jpg"
+                alt="">
+              <h3>Áo PoLo Glen Check Brown</h3>
+
+              <p>190.00<sup>đ</sup>-250.000<sup>đ</sup></p>
+            </div>
+            <div class="cartegory-right-content-item">
+              <img
+                src="https://product.hstatic.net/1000026602/product/dsc06806_5a9320d0381548bfb3abea459a1371fb_large.jpg"
+                alt="">
+              <h3>Áo PoLo Pixel Waves</h3>
+              <p>190.00<sup>đ</sup>-250.000<sup>đ</sup></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pagination row">
+        <span><i class="fa fa-angle-left"></i></span>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span><i class="fa fa-angle-right"></i></span>
+      </div>
+  </section>
+  <!--------app-------->
+
+  <!--------------------app------->
+  <div class="footerr">
+    <div class="col">
+      <img
+        src="https://designercomvn.s3.ap-southeast-1.amazonaws.com/wp-content/uploads/2018/12/06090103/logo-shop-qu%E1%BA%A7n-%C3%A1o-8.png"
+        alt="" width="100" height="150">
+      <img src="https://pubcdn.ivymoda.com/ivy2/images/img-congthuong.png" alt="">
+      <img src="https://images.dmca.com/Badges/dmca_protected_16_120.png?ID=0cfdeac4-6e7f-4fca-941f-57a0a0962777"
+        alt="">
+      <a href=""><i class="fa-brands fa-facebook"></i></a>
+      <a href=""><i class="fa-brands fa-tiktok"></i></a>
+      <a href=""><i class="fa-solid fa-g"></i></a>
+      <a href=""><i class="fa-brands fa-instagram"></i></a>
+      <a href=""><i class="fa-brands fa-youtube"></i></a>
+      <div class="hotline">
+        <a href="">HOT ONLINE: 0345678910</a>
+      </div>
+    </div>
+
+    <div class="col">
+      <h3>Giới Thiệu </h3>
+      <ul>
+        <li><a href="">Về ASIN Store</a></li>
+        <li><a href="">Tuyển Dụng</a></li>
+        <li><a href="">Hệ Thống cửa Hàng</a></li>
+      </ul>
+    </div>
+    <div class="col">
+      <h3>Dịch Vụ Khách Hàng </h3>
+      <ul>
+        <li><a href="">Chính Sách Điều Khoản </a></li>
+        <li><a href="">Hệ thống Mua dùng</a></li>
+        <li><a href="">chính sách bảo hành</a></li>
+        <li><a href="">Chính sách đổi trả </a></li>
+        <li><a href="">Chính sách giao nhận vận chuyển</a></li>
+        <li><a href="">Hệ Thống Cửa Hàng</a></li>
+      </ul>
+    </div>
+    <div class="col">
+      <h3>Liên Hệ nhóm Hồ Anh Hùng Huynh </h3>
+      <ul>
+        <li><a href="">Email </a></li>
+        <li><a href="">Hotline:</a></li>
+        <li><a href="">Live Chat</a></li>
+        <li><a href="">message</a></li>
+        <li><a href="">Liên Hệ</a></li>
+      </ul>
+    </div>
+  </div>
+
+</body>
+<script>
+  const itemsliderbar = document.querySelectorAll(".cartegory-left-li")
+  itemsliderbar.forEach(function (menu, index) {
+    menu.addEventListener("click", function () {
+      menu.classList.toggle("block")
+    })
+  })
+  const header = document.querySelector("header")
+  window.addEventListener("scroll", function () {
+    x = window.pageYOffset
+    if (x > 0) {
+      header.classList.add("sticky")
+    } else {
+      header.classList.remove("sticky")
+    }
+  })
+</script>
+
+</html>

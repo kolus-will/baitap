@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/backend.css" />
+    <title>backend</title>
+  </head>
+
+  <body>
+    <div class="container-left">
+      <div class="header-logo">
+        <img
+          src="./img/8619184.svg"
+          height="150px"
+          width="150px"
+          loading="lazy"
+          alt="logo trang"
+        />
+      </div>
+      <div class="header-nav">
+        <ul class="nav-items">
+          <a href="tranglogin.html" target="_blank">
+            <li class="nav-li-items">
+              <i class="fa-solid fa-house"></i>Trang Login
+            </li>
+          </a>
+          <a href="">
+            <li class="nav-li-items">
+              <i class="fa-solid fa-address-card"></i> Thông Tin Tài Khoản
+            </li>
+          </a>
+          <a href="">
+            <li class="nav-li-items">
+              <i class="fa-solid fa-chart-simple"></i>Biểu Đồ
+            </li>
+          </a>
+          <a href="danhsach.html" target="_blank">
+            <li class="nav-li-items">
+              <i class="fa-solid fa-bars"></i>Chi Tiết
+            </li>
+          </a>
+          <a href="">
+            <li class="nav-li-items">
+              <i class="fa-solid fa-comments"></i>Phản Hồi Khách Hàng
+            </li>
+          </a>
+          <a href="">
+            <li class="nav-li-items">
+              <i class="fa-solid fa-truck"></i>Chi Tiết Vận Chuyển
+            </li>
+          </a>
+        </ul>
+      </div>
+    </div>
+    <div class="container-right">
+      <div class="container-header">
+        <div class="header-icon">
+          <span class="header-icon-items">
+            <input
+              type="search"
+              autocomplete="on"
+              placeholder="Tim kiem"
+              id="header-input"
+            />
+            <label for="header-input">
+              <span class="header-icon-items"
+                ><i class="fa-solid fa-magnifying-glass"></i
+              ></span>
+            </label>
+          </span>
+          <span class="header-icon-items header-icon-person"
+            ><i class="fa-solid fa-user"></i
+          ></span>
+        </div>
+      </div>
+      <div class="container-body">
+        <div class="body-chart">
+          <div class="body-chart-items doughnut-chart">
+            <canvas id="body-chart-items-favorite" height="100" width="200"></canvas>
+          </div>
+          <div class="body-chart-items char-chart">
+            <canvas id="body-chart-items-Buy"height="100" width="200"></canvas>
+          </div>
+          <div class="body-chart-items line-chart">
+            <canvas id="body-chart-items-sum"height="100" width="200" ></canvas>
+          </div>
+        </div>
+        <div class="body-statistics">
+          <div class="body-statistics-items body-statistics-buy">
+            <h2>Tổng Số Tiền Người Đã Mua:</h2>
+            <div class="body-statistics-items-number">
+              <h1>268.8191 $</h1>
+            </div>
+          </div>
+          <div class="body-statistics-items body-statistics-Inventory">
+            <h2>Tổng Lượng Áo Còn:</h2>
+            <div class="body-statistics-items-number">
+              <h1>234.4 Chiếc</h1>
+            </div>
+          </div>
+          <div class="body-statistics-items body-statistics-sum">
+            <h2>Tổng Tiền Thu Được:</h2>
+            <div class="body-statistics-items-number">
+              <h1>688.729.3 $</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-body-footer">
+        <div class="body-rencent">
+          <h4>recent:</h4>
+        </div>
+        <div class="container-footer">
+          <h4>Đây Là Bản Quyền Của Chúng Tôi! NoCopyRight</h4>
+          <p>Cám Ơn Mọi Người Đã Xem</p>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="./js/backend.js"></script>
+</html>

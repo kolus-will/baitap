@@ -1,0 +1,167 @@
+body {
+  font-family: monospace;
+  box-sizing: border-box;
+}
+:root {
+  --icon: rgb(0, 153, 153);
+  --text: rgb(26, 26, 26);
+}
+header {
+  background-color: rgb(217, 217, 217);
+  display: flex;
+ 
+  justify-content: space-around;
+  background-image: url("https://studiovietnam.com/wp-content/uploads/2023/01/phong-nen-chup-anh-quan-ao-01-1024x576.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.header-ul {
+  list-style-type: none;
+  display: flex;
+  height: 10px;
+  text-transform: capitalize;
+}
+.header-ul .header-li-items a {
+  list-style: none;
+  text-decoration: none;
+  color: var(--text);
+  margin: 5px 20px;
+  text-transform: capitalize;
+}
+.header-ul .header-li-items a:hover {
+  background-color: aliceblue;
+  width: 15px;
+  opacity: 0.2;
+}
+.header-icon {
+  display: flex;
+  justify-content: end;
+}
+.header-icon svg :hover {
+  background-color: aliceblue;
+  width: 15px;
+  opacity: 0.2;
+}
+.header-icon svg {
+  color: var(--icon);
+  margin: 5px 10px;
+}
+
+main {
+  width: 90%;
+  display: flex;
+  margin: 0 4%;
+  padding: 5px 0;
+  padding-right: 4px; 
+  background-color: rgb(239, 245, 245);
+}
+
+.img-main img {
+  width: 400px;
+  height: auto;
+  border-radius: 10px 0 0 10px;
+  margin-bottom: 2px;
+}
+
+@media (max-width: 766px) {
+  .header-ul {
+    margin: 0;
+    padding: 0;
+  }
+  .header-ul .header-li-items a {
+    list-style: none;
+    text-decoration: none;
+    color: var(--text);
+    display: flex;
+    width: 100px;
+    text-transform: capitalize;
+    margin: 3px 0;
+  }
+  .header-ul .header-li-items a:hover {
+    background-color: aliceblue;
+    width: 15px;
+    opacity: 0.2;
+  }
+  .footer-member h3 {
+    width: 200px;
+    font-size: larger;
+    text-transform: capitalize;
+  }
+  header,footer{
+    width: 150%;
+  }
+  main{
+    width: 120%;
+  }
+  .footer-address{
+    width:150%;
+    background-color: rgb(40, 40, 133);
+  }
+  footer{
+    height: max-content;
+  }
+ 
+}
+@media (min-width: 768px) {
+  .img-main img {
+    width: 600px;
+    border-radius: 10px 0 0 10px;
+    margin-bottom: 2px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .img-main img {
+    width: 800px;
+    border-radius: 10px 0 0 10px;
+    margin-bottom: 2px;
+  }
+}
+#main-left {
+  border-left: 1px solid black;
+  border-top: 3px solid black;
+  border-radius: 14px;
+}
+
+#main-right {
+  margin-left: 10px;
+}
+.btn-input-form {
+  outline: none;
+  border: none;
+}
+#input-btn-form,
+#option-cloth-kinds,
+.btn-buy-success {
+  outline: none;
+  margin: 10px 10px;
+  border: none;
+}
+.btn-buy-success {
+  width: 100px;
+  background-color: var(--icon);
+}
+
+footer{
+  width:100%;
+  background-color: rgb(40, 40, 133);
+  display: flex;
+  justify-content: space-around;
+}
+.footer-address,.footer-member{
+  padding: 10px;
+}
+.footer-member h3 {
+  text-align: center;
+}
+.footer-icon-link a {
+  text-decoration: none;
+  color: var(--icon);
+}
+.footer-icon-link a :hover{
+  background-color: aliceblue;
+  width: 15px;
+  opacity: 0.2;
+  border-radius: 10px;
+}
