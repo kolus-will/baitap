@@ -33,6 +33,7 @@
           alt="logo trang"
         />
       </div>
+      <h2>Xin Chào ADMIN</h2>
       <div class="header-nav">
         <ul class="nav-items">
           <a href="tranglogin.html" target="_blank">
@@ -40,7 +41,7 @@
               <i class="fa-solid fa-house"></i>Trang Login
             </li>
           </a>
-          <a href="">
+          <a href="#">
             <li class="nav-li-items">
               <i class="fa-solid fa-address-card"></i> Thông Tin Tài Khoản
             </li>
@@ -55,12 +56,12 @@
               <i class="fa-solid fa-bars"></i>Chi Tiết
             </li>
           </a>
-          <a href="">
+          <a href="#">
             <li class="nav-li-items">
               <i class="fa-solid fa-comments"></i>Phản Hồi Khách Hàng
             </li>
           </a>
-          <a href="">
+          <a href="#">
             <li class="nav-li-items">
               <i class="fa-solid fa-truck"></i>Chi Tiết Vận Chuyển
             </li>
@@ -90,31 +91,50 @@
         </div>
       </div>
       <div class="container-body">
+        <div class="container-body-text">
+          <h1>Sơ Đồ Chi Tiết:</h1>
+        </div>
         <div class="body-chart">
           <div class="body-chart-items doughnut-chart">
-            <canvas id="body-chart-items-favorite" height="100" width="200"></canvas>
+            <canvas
+              id="body-chart-items-favorite"
+              height="100"
+              width="200"
+            ></canvas>
           </div>
           <div class="body-chart-items char-chart">
-            <canvas id="body-chart-items-Buy"height="100" width="200"></canvas>
+            <canvas id="body-chart-items-Buy" height="100" width="200"></canvas>
           </div>
           <div class="body-chart-items line-chart">
-            <canvas id="body-chart-items-sum"height="100" width="200" ></canvas>
+            <canvas id="body-chart-items-sum" height="100" width="200"></canvas>
           </div>
+        </div>
+        <div class="container-body-text">
+          <h1>Số Liệu Chi Tiết:</h1>
         </div>
         <div class="body-statistics">
           <div class="body-statistics-items body-statistics-buy">
-            <h2>Tổng Số Tiền Người Đã Mua:</h2>
+            <div class="body-statistics-icon">
+              <i class="fa-brands fa-shopify"></i>
+            </div>
+            <h2>Tổng Người Đã Mua:</h2>
             <div class="body-statistics-items-number">
-              <h1>268.8191 $</h1>
+              <h1>268.8191 Người</h1>
             </div>
           </div>
           <div class="body-statistics-items body-statistics-Inventory">
+            <div class="body-statistics-icon">
+              <i class="fa-solid fa-shirt"></i>
+            </div>
             <h2>Tổng Lượng Áo Còn:</h2>
             <div class="body-statistics-items-number">
               <h1>234.4 Chiếc</h1>
             </div>
           </div>
           <div class="body-statistics-items body-statistics-sum">
+            <div class="body-statistics-icon">
+              <i class="fa-solid fa-money-bill"></i>
+            </div>
             <h2>Tổng Tiền Thu Được:</h2>
             <div class="body-statistics-items-number">
               <h1>688.729.3 $</h1>
@@ -125,7 +145,40 @@
       <div class="container-body-footer">
         <div class="body-rencent">
           <h4>recent:</h4>
+          <table class="body-table">
+            <tr class="body-table-tr">
+              <th>Ho Ten</th>
+              <th>San Pham</th>
+              <th>So Luong(chiec)</th>
+              <th>Ngay Sinh</th>
+              <th>Dia Chi</th>
+            </tr>
+            <tr class="body-table-tr">
+              <td>Ho Duc Anh</td>
+              <td>Ao Polo</td>
+              <td>10</td>
+              <td>2024-6-6</td>
+              <td>Ho Tay</td>
+            </tr>
+
+            <tr class="body-table-tr">
+              <td>Nguyen Duc Thien</td>
+              <td>Ao Khoac</td>
+              <td>20</td>
+              <td>2024-9-10</td>
+              <td>Thai Binh</td>
+            </tr>
+
+            <tr class="body-table-tr">
+              <td>Bui Duc Dung</td>
+              <td>Quan Dui</td>
+              <td>5</td>
+              <td>2024-8-3</td>
+              <td>Tay Nguyen</td>
+            </tr>
+          </table>
         </div>
+
         <div class="container-footer">
           <h4>Đây Là Bản Quyền Của Chúng Tôi! NoCopyRight</h4>
           <p>Cám Ơn Mọi Người Đã Xem</p>

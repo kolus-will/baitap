@@ -170,6 +170,11 @@
   }
 
   /*-------------------------------------------------app----------------------------*/
+  #Slider {
+    padding-bottom: 30px;
+    border-bottom: 2px solid #000;
+    overflow: hidden;
+  }
 
   .aspect-ratio-169 {
     display: block;
@@ -262,7 +267,10 @@
   }
 
   .cartegory-top {
-    margin-bottom: 50px;
+    margin-bottom: 45px;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: var(--main-text-font);
   }
 
   .cartegory-top p {
@@ -273,6 +281,14 @@
 
   .cartegory-left {
     width: 20%;
+  }
+
+  .cartegory-left p {
+    border: 2px solid #000;
+    padding: 8px 6px;
+    margin-right: 60px;
+    font-weight: bold;
+    font-family: var(--main-text-font);
   }
 
   .cartegory-right {
@@ -322,8 +338,16 @@
     padding: 12px 0;
   }
 
+  .cartegory-right-cont-item p {
+    padding: 5px;
+    font-family: var(--main-text-font);
+    margin-top: 6px;
+    color: #000;
+
+  }
+
   .cartegory-right-cont-item h4 {
-    font-size: 11px;
+    font-size: 15px;
     font-family: var(--main-text-font);
     margin-top: 6px;
     color: #000;
@@ -331,6 +355,7 @@
 
   .cartegory-right-cont-item img {
     width: 100%;
+    margin-bottom: 20px;
   }
 
   .cartegory-right-cont-item p {
@@ -362,18 +387,27 @@
   }
 
   .cartegory-right-cont h4 {
-    font-size: 14px;
+    font-size: 15px;
   }
 
   .cartegory-right-cont a {
     display: block;
-    border: 1px solid #dd2c00;
+    border: 1px solid #000;
     text-decoration: none;
-    padding: 6px 0;
+    border-radius: 24px 0px;
+    padding: 13px 30px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #221F20;
+    display: inline-block;
+    position: relative;
   }
 
   .cartegory-right-cont .price {
-    color: #ddc700;
+    color: #000;
+    font-weight: bold;
+    font-family: var(--main-text-font);
+
   }
 
   .cartegory-right-buttom {
@@ -423,11 +457,11 @@
 
   @media (max-width: 768px) {
     .button .button-code {
-      font-size: 14px;
-      line-height: 16px;
-      padding: 10px 16px;
-      border-radius: 12px 0px;
-    }
+    font-size: 14px;
+    line-height: 16px;
+    padding: 10px 16px;
+    border-radius: 12px 0px;
+  }
   }
 
   .button .button-code {
@@ -449,7 +483,7 @@
     <div class="logo">
       <img
         src="https://designercomvn.s3.ap-southeast-1.amazonaws.com/wp-content/uploads/2018/12/06090103/logo-shop-qu%E1%BA%A7n-%C3%A1o-8.png"
-        alt="" width="120" height="150">;
+        alt="" width="120" height="150">
     </div>
     <div class="menu">
       <li><a href="">ÁO QUẦN NAM</a>
@@ -526,7 +560,7 @@
       <li><a href=""><input placeholder="Tìm Kiếm" type="text"> <i class="fas fa-search"></i></a>
         <ul class="sub">
           <ul class="an">
-            <li style="font-weight: bold;">Tìm Kiếm Nhiều Nhất</li>
+            <li>Tìm Kiếm Nhiều Nhất</li>
             <ul>
               <li><a href="">ÁO</a></li>
               <li><a href="">QUẦN</a></li>
@@ -546,11 +580,13 @@
     <div class="aspect-ratio-169">
       <img
         src="https://file.hstatic.net/200000472237/file/chup-anh-quan-ao-dep-bang-dien-thoai_ed543464b2c248588df949f9618361f8_grande.jpg">
-      <img src="https://aeros.vn/upload/images/thiet-ke-shop-thoi-trang-6.jpg">
-      <img src="https://lavenderstudio.com.vn/wp-content/uploads/2021/06/cach-chup-hinh-san-pham-quan-ao-dep-2.png">
-      <img src="https://blog.dktcdn.net/files/kinh-nghiem-mo-shop-quan-ao-1.png">
-      <img src="https://simerp.io/wp-content/uploads/2021/12/ke-hoach-kinh-doanh-quan-ao.jpg">
-      <img src="https://blog.webico.vn/wp-content/uploads/2019/12/7cbae302da0f925f931a92f044156b18-1.jpg">
+      <img src="https://aeros.vn/upload/images/thiet-ke-shop-thoi-trang-6.jpg" alt="">
+      <img src="https://lavenderstudio.com.vn/wp-content/uploads/2021/06/cach-chup-hinh-san-pham-quan-ao-dep-2.png"
+        alt="">
+      <img src="https://blog.dktcdn.net/files/kinh-nghiem-mo-shop-quan-ao-1.png" alt="">
+      <img src="https://simerp.io/wp-content/uploads/2021/12/ke-hoach-kinh-doanh-quan-ao.jpg" alt="">
+      <img src="https://blog.webico.vn/wp-content/uploads/2019/12/7cbae302da0f925f931a92f044156b18-1.jpg" alt="">
+
 
     </div>
     <div class="dot-content">
@@ -572,6 +608,7 @@
       <div class="content">
         <div class="row">
           <div class="cartegory-left">
+            <P><a href=""> DANH MỤC SẢN PHẨM </a></P>
             <ul>
               <li class="cartegory-left-li"><a href="#">ÁO QUẦN NAM</a>
                 <ul>
@@ -588,9 +625,7 @@
                 </ul>
               </li>
               <li class="cartegory-left-li"><a href="">SALE ONLINE ONLY</a></li>
-              <li class="cartegory-left-li"><a href="">SALE ONLINE ONLY</a></li>
-              <li class="cartegory-left-li"><a href="">SALE ONLINE ONLY</a></li>
-              <li class="cartegory-left-li"><a href="">SALE ONLINE ONLY</a></li>
+
 
             </ul>
           </div>
@@ -613,85 +648,85 @@
             <div class="cartegory-right-cont row">
               <div class="cartegory-right-cont-item">
                 <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM8FaCU8THjQzGoCGguPX1tL_5wqcCOqfF_uyf0uRjYw&s"
-                  alt="" />;
+                  src="https://product.hstatic.net/1000026602/product/img_9727_43583c0bff174e39acba56d1f3bc75e0_large.jpg"
+                  alt="" />
                 <div class="Sale"> -20%</div>
-                <h4>áo cổ tròn ngắn tay quần short</h4>
+                <h4>Áo PoLo Athletic The Checked</h4>
                 <p>Tick.Vn</p>
-                <div class="price"><span>$100</span> - $400</div>
-                <a href="">Mua Ngay</a>
+                <div class="price"><span>299.000<sup>đ</sup></span> - 399.000<sup>đ</sup></div>
+                <a href="chitietsanpham.html">Mua Ngay</a>
 
               </div>
               <div class="cartegory-right-cont-item">
                 <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJrjKepOm1sq4DZ0_tZDi9-EXsYQ2ji-7jaYyrZcgk-A&s"
-                  alt="" />;
+                  src="https://product.hstatic.net/1000026602/product/dsc05413_fbc7ec1b00404a06b65380d1ca28fde3_large.jpg"
+                  alt="" />
                 <div class="Sale"> -50%</div>
-                <h4>Áo tay dài mùa Đông</h4>
+                <h4>Áo Polo Monogram Deep Efect</h4>
                 <p>Tick.Vn</p>
-                <div class="price"><span>$100</span> - $400</div>
-                <a href="">Mua Ngay</a>
+                <div class="price"><span>299.000<sup>đ</sup></span> - 399.000<sup>đ</sup></div>
+                <a href="chitietsanpham2.html">Mua Ngay</a>
               </div>
 
               <div class="cartegory-right-cont-item">
                 <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbYV7xzASH04JirmXD7HNHEcazu6lH63bjSvepURVwsQ&s"
-                  alt="" />;
+                  src="https://product.hstatic.net/1000026602/product/img_8098_99f2447cc83a4fc7a2d3b13bbf088747_large.jpg"
+                  alt="" />
                 <div class="Sale"> -30%</div>
-                <h4>Áo Đẹp</h4>
+                <h4>Áo Polo BOB Sleeves Navy</h4>
                 <p>Tick.Vn</p>
-                <div class="price"><span>$100</span> - $400</div>
-                <a href="">Mua Ngay</a>
+                <div class="price"><span>299.000<sup>đ</sup></span> - 399.000<sup>đ</sup></div>
+                <a href="chitietsanpham3.html">Mua Ngay</a>
               </div>
 
               <div class="cartegory-right-cont-item">
                 <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi1YhZCW_LrEZGSYa_VCTAydaqJMPIpAIOsK3Blfuc9g&s"
-                  alt="" />;
+                  src="https://product.hstatic.net/1000026602/product/dsc06806_5a9320d0381548bfb3abea459a1371fb_large.jpg"
+                  alt="" />
                 <div class="Sale"> -30%</div>
-                <h4>Áo Đẹp</h4>
+                <h4>Áo PoLo Suede Elip Mark</h4>
                 <p>Tick.Vn</p>
-                <div class="price">$100-$400</div>
+                <div class="price"><span>299.000<sup>đ</sup></span> - 399.000<sup>đ</sup></div>
                 <a href="">Mua Ngay</a>
               </div>
               <div class="cartegory-right-cont-item">
                 <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi1YhZCW_LrEZGSYa_VCTAydaqJMPIpAIOsK3Blfuc9g&s"
-                  alt="" />;
+                  src="https://product.hstatic.net/1000026602/product/img_6604_cb81aa2b591e42f9bf3c7e85cef3846b_large.jpg"
+                  alt="" />
                 <div class="Sale"> -30%</div>
-                <h4>Áo Đẹp</h4>
+                <h4>Quần Jean Straight Patchwork </h4>
                 <p>Tick.Vn</p>
-                <div class="price">$100-$400</div>
+                <div class="price"><span>299.000<sup>đ</sup></span> - 399.000<sup>đ</sup></div>
                 <a href="">Mua Ngay</a>
               </div>
               <div class="cartegory-right-cont-item">
                 <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi1YhZCW_LrEZGSYa_VCTAydaqJMPIpAIOsK3Blfuc9g&s"
-                  alt="" />;
+                  src="https://product.hstatic.net/1000026602/product/img_8472_7d4aeb21f3304ff69e4450430128acf9_master.jpg"
+                  alt="" />
                 <div class="Sale"> -30%</div>
-                <h4>Áo Đẹp</h4>
+                <h4>Quần Short Denim Black Effect</h4>
                 <p>Tick.Vn</p>
-                <div class="price">$100-$400</div>
+                <div class="price"><span>299.000<sup>đ</sup></span> - 399.000<sup>đ</sup></div>
                 <a href="">Mua Ngay</a>
               </div>
               <div class="cartegory-right-cont-item">
                 <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2y7N-d9XHK1Wt7HxWM8w7CEl30jRsRX1l7XMKIOgtmg&s"
-                  alt="" />;
+                  src="https://product.hstatic.net/1000026602/product/img_7172_86a1cc065e94450584be28c4603ff16e_large.jpg"
+                  alt="" />
                 <div class="Sale"> -30%</div>
-                <h4>Áo Đẹp</h4>
+                <h4>Áo Thun Pattern Shoulder Side</h4>
                 <p>Tick.Vn</p>
-                <div class="price">$100-$400</div>
+                <div class="price"><span>299.000<sup>đ</sup></span> - 399.000<sup>đ</sup></div>
                 <a href="">Mua Ngay</a>
               </div>
               <div class="cartegory-right-cont-item">
                 <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPf4XkMywY7bM7pk9mAAWdeS-8Rtwrurisxa_Opf4dFA&s"
-                  alt="" />;
+                  src="https://product.hstatic.net/1000026602/product/img_8959_6e07ff3e03af4dfe9af33a29e202cc22_master.jpg"
+                  alt="" />
                 <div class="Sale"> -30%</div>
-                <h4>Áo Đẹp</h4>
+                <h4>Set Shirt Short Dominos Black</h4>
                 <p>Tick.Vn</p>
-                <div class="price">$100-$400</div>
+                <div class="price"><span>299.000<sup>đ</sup></span> - 399.000<sup>đ</sup></div>
                 <a href="">Mua Ngay</a>
               </div>
             </div>
@@ -717,7 +752,7 @@
     <div class="col">
       <img
         src="https://designercomvn.s3.ap-southeast-1.amazonaws.com/wp-content/uploads/2018/12/06090103/logo-shop-qu%E1%BA%A7n-%C3%A1o-8.png"
-        alt="" width="100" height="150">
+        alt="" width="120" height="150">
       <img src="https://pubcdn.ivymoda.com/ivy2/images/img-congthuong.png" alt="">
       <img src="https://images.dmca.com/Badges/dmca_protected_16_120.png?ID=0cfdeac4-6e7f-4fca-941f-57a0a0962777" alt=""
         height="30">
